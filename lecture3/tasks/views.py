@@ -28,7 +28,7 @@ def add(request):
     if request.method == "POST":
 
         # Take in the data the user submitted and save it as form
-        form = NewTaskForm(request.POST)
+        form = NewTaskFrom(request.POST)
 
         # Check if form data is valid (server-side)
         if form.is_valid():
@@ -49,7 +49,7 @@ def add(request):
             })
 
     return render(request, "tasks/add.html", {
-        "form": NewTaskForm()
+        "form": NewTaskFrom()
     })
 
 
